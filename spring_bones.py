@@ -575,7 +575,8 @@ class SB_OT_spring_modal(bpy.types.Operator):
     bl_idname = "sb.spring_bone"
     bl_label = "spring_bone" 
     
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.timer_handler = None
      
     def modal(self, context, event):  
